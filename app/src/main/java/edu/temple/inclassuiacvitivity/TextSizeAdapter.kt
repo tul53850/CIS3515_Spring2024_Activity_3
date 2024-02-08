@@ -1,17 +1,21 @@
 package edu.temple.inclassuiacvitivity
 
+import android.content.Context
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 
-class TextSizeAdapter : BaseAdapter() {
+class TextSizeAdapter(_context: Context, resource: Int, _numbers: Array<String>) : BaseAdapter() {
+
+    private val context = _context
+    private val numbers = _numbers
 
     override fun getCount(): Int {
-        TODO("Not yet implemented")
+        return numbers.size
     }
 
     override fun getItem(position: Int): Any {
-        TODO("Not yet implemented")
+        return numbers[position]
     }
 
     override fun getItemId(position: Int): Long {
